@@ -21,7 +21,7 @@ def get_gemini_response(question):  #this question will got to LLM Model
 
 #initalize our streamlit app
 
-st.set_page_config(page_title="Q&A Demo")
+st.set_page_config(page_title="Chat Bot")
 
 st.header("Chat Bot")
 
