@@ -31,6 +31,7 @@ if 'chat_history' not in st.session_state:
 
 input = st.text_input("Input:", key="input") #text box with input variable name
 submit = st.button("Ask the question")
+voicAssitant = st.button("Voice Assistant")
 
 # both should be filled
 if submit and input:
@@ -45,7 +46,6 @@ st.subheader("The Chat History is")
 
 for role,text in st.session_state['chat_history']:
     st.write(f"{role}:{text}")
-
 
 
 
