@@ -26,7 +26,7 @@ def recognize_speech():
     with sr.Microphone() as source:
         st.text("Listening...")  # Display real-time voice input
         audio = r.listen(source)
-        st.text("Processing...")
+        st.text("Recognizing...")
     try:
         text = r.recognize_google(audio)
         return text
@@ -47,7 +47,7 @@ if 'input_text' not in st.session_state:
     st.session_state['input_text'] = ""
 
 # Display input text area
-input_text = st.text_area("Speak or type here:", value=st.session_state['input_text'])
+input_text = st.text_area("Speak or Type here:", value=st.session_state['input_text'])
 
 # Placeholder for voice input
 voice_feedback = st.empty()
